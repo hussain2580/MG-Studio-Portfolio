@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+/* 1. Custom Fonts (Optional: Agar aap Google Fonts use karna chahen) */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* 2. Custom Color Utility (MG Studio Brand Colors) */
+@theme {
+  --color-brand-blue: #2563eb;
+  --color-brand-green: #16a34a;
+  --color-dark-bg: #0f172a;
+}
+
+/* 3. Reusable Components (Optional: Form inputs ko clean karne ke liye) */
+@layer components {
+  .input-field {
+    @apply w-full p-4 rounded-xl border-none outline-none focus:ring-2 focus:ring-blue-400 transition-all;
+  }
+  
+  .btn-primary {
+    @apply bg-brand-blue text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-all shadow-md active:scale-95;
+  }
+}
+
+/* 4. Background Gradients & Effects */
+body {
+  @apply bg-slate-50 text-slate-900;
+  background-image: radial-gradient(#e2e8f0 0.5px, transparent 0.5px);
+  background-size: 24px 24px; /* Chhota sa dot pattern background ke liye */
+}
+
+/* Image/Card Hover Effects */
+.card-glass {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}

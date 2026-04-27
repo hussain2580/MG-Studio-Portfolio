@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "tailwindcss";
+
+/* Agar purani v3 wali lines hain (@tailwind base etc.), 
+toh unhein delete karke sirf upar wali line likh dein */
+
+html {
+  scroll-behavior: smooth;
+}

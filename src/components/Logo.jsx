@@ -1,0 +1,5 @@
+import mgStudio from '../assets/mgstudio.svg';
+
+export const Logo = () => (
+  <img src={mgStudio} alt="MG Studio Logo" className="w-120 h-12" />
+);
