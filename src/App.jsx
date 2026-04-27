@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { Logo } from './components/Logo';
 import AndroidProject from './components/androidapp';
 import { Link } from 'react-router-dom';
+// import contact from 'https://wa.me/qr/6B74S3PPOSBWP1';
 // import { mgLogo } from './components/Logo';
 import { Smartphone, Globe,  Cpu, Laptop, ShieldCheck, ShoppingCart } from 'lucide-react';
 
@@ -66,7 +67,7 @@ const MGStudioPortfolio = () => {
         <p className="text-lg text-slate-600 mb-8">
           MG Studio specializes in UI/UX design, full-stack development, and smart business automation.
         </p>
-        <button className="bg-green-600 text-white px-8 py-3 rounded-full font-bold hover:bg-green-700 transition">
+        <button className="bg-green-600 text-white px-8 py-3 rounded-full font-bold hover:bg-green-700 transition" href="#contact">
           Schedule a Free Call
         </button>
       </header>
@@ -100,217 +101,7 @@ const MGStudioPortfolio = () => {
     </Link>
   </motion.div>
 ))}
-             {services.map((s, i) => (
-  <motion.div 
-    key={i} 
-    whileHover={{ y: -10 }}
-    className="p-8 border border-slate-100 rounded-xl hover:shadow-2xl transition-all bg-white group"
-  >
-    {/* Icon (Yahan se src hata dein, iski zaroorat nahi) */}
-    <div className="text-4xl mb-4">{s.icon}</div>
-    
-    <h3 className="text-xl font-bold mb-3">{s.title}</h3>
-    <p className="text-slate-500 text-sm leading-relaxed">{s.desc}</p>
-    
-    {/* Link use karein naya page kholne ke liye */}
-    <Link 
-      to={`/project/${s.id}`} 
-      className="mt-4 text-green-600 font-semibold flex items-center gap-2 hover:underline inline-flex"
-    >
-      Read More <span>→</span>
-    </Link>
-  </motion.div>
-))}
-             {services.map((s, i) => (
-  <motion.div 
-    key={i} 
-    whileHover={{ y: -10 }}
-    className="p-8 border border-slate-100 rounded-xl hover:shadow-2xl transition-all bg-white group"
-  >
-    {/* Icon (Yahan se src hata dein, iski zaroorat nahi) */}
-    <div className="text-4xl mb-4">{s.icon}</div>
-    
-    <h3 className="text-xl font-bold mb-3">{s.title}</h3>
-    <p className="text-slate-500 text-sm leading-relaxed">{s.desc}</p>
-    
-    {/* Link use karein naya page kholne ke liye */}
-    <Link 
-      to={`/project/${s.id}`} 
-      className="mt-4 text-green-600 font-semibold flex items-center gap-2 hover:underline inline-flex"
-    >
-      Read More <span>→</span>
-    </Link>
-  </motion.div>
-))}
-             {services.map((s, i) => (
-  <motion.div 
-    key={i} 
-    whileHover={{ y: -10 }}
-    className="p-8 border border-slate-100 rounded-xl hover:shadow-2xl transition-all bg-white group"
-  >
-    {/* Icon (Yahan se src hata dein, iski zaroorat nahi) */}
-    <div className="text-4xl mb-4">{s.icon}</div>
-    
-    <h3 className="text-xl font-bold mb-3">{s.title}</h3>
-    <p className="text-slate-500 text-sm leading-relaxed">{s.desc}</p>
-    
-    {/* Link use karein naya page kholne ke liye */}
-    <Link 
-      to={`/project/${s.id}`} 
-      className="mt-4 text-green-600 font-semibold flex items-center gap-2 hover:underline inline-flex"
-    >
-      Read More <span>→</span>
-    </Link>
-  </motion.div>
-))}
-             {services.map((s, i) => (
-  <motion.div 
-    key={i} 
-    whileHover={{ y: -10 }}
-    className="p-8 border border-slate-100 rounded-xl hover:shadow-2xl transition-all bg-white group"
-  >
-    {/* Icon (Yahan se src hata dein, iski zaroorat nahi) */}
-    <div className="text-4xl mb-4">{s.icon}</div>
-    
-    <h3 className="text-xl font-bold mb-3">{s.title}</h3>
-    <p className="text-slate-500 text-sm leading-relaxed">{s.desc}</p>
-    
-    {/* Link use karein naya page kholne ke liye */}
-    <Link 
-      to={`/project/${s.id}`} 
-      className="mt-4 text-green-600 font-semibold flex items-center gap-2 hover:underline inline-flex"
-    >
-      Read More <span>→</span>
-    </Link>
-  </motion.div>
-))}
-             {services.map((s, i) => (
-  <motion.div 
-    key={i} 
-    whileHover={{ y: -10 }}
-    className="p-8 border border-slate-100 rounded-xl hover:shadow-2xl transition-all bg-white group"
-  >
-    {/* Icon (Yahan se src hata dein, iski zaroorat nahi) */}
-    <div className="text-4xl mb-4">{s.icon}</div>
-    
-    <h3 className="text-xl font-bold mb-3">{s.title}</h3>
-    <p className="text-slate-500 text-sm leading-relaxed">{s.desc}</p>
-    
-    {/* Link use karein naya page kholne ke liye */}
-    <Link 
-      to={`/project/${s.id}`} 
-      className="mt-4 text-green-600 font-semibold flex items-center gap-2 hover:underline inline-flex"
-    >
-      Read More <span>→</span>
-    </Link>
-  </motion.div>
-))}
-             {services.map((s, i) => (
-  <motion.div 
-    key={i} 
-    whileHover={{ y: -10 }}
-    className="p-8 border border-slate-100 rounded-xl hover:shadow-2xl transition-all bg-white group"
-  >
-    {/* Icon (Yahan se src hata dein, iski zaroorat nahi) */}
-    <div className="text-4xl mb-4">{s.icon}</div>
-    
-    <h3 className="text-xl font-bold mb-3">{s.title}</h3>
-    <p className="text-slate-500 text-sm leading-relaxed">{s.desc}</p>
-    
-    {/* Link use karein naya page kholne ke liye */}
-    <Link 
-      to={`/project/${s.id}`} 
-      className="mt-4 text-green-600 font-semibold flex items-center gap-2 hover:underline inline-flex"
-    >
-      Read More <span>→</span>
-    </Link>
-  </motion.div>
-))}
-             {services.map((s, i) => (
-  <motion.div 
-    key={i} 
-    whileHover={{ y: -10 }}
-    className="p-8 border border-slate-100 rounded-xl hover:shadow-2xl transition-all bg-white group"
-  >
-    {/* Icon (Yahan se src hata dein, iski zaroorat nahi) */}
-    <div className="text-4xl mb-4">{s.icon}</div>
-    
-    <h3 className="text-xl font-bold mb-3">{s.title}</h3>
-    <p className="text-slate-500 text-sm leading-relaxed">{s.desc}</p>
-    
-    {/* Link use karein naya page kholne ke liye */}
-    <Link 
-      to={`/project/${s.id}`} 
-      className="mt-4 text-green-600 font-semibold flex items-center gap-2 hover:underline inline-flex"
-    >
-      Read More <span>→</span>
-    </Link>
-  </motion.div>
-))}
-             {services.map((s, i) => (
-  <motion.div 
-    key={i} 
-    whileHover={{ y: -10 }}
-    className="p-8 border border-slate-100 rounded-xl hover:shadow-2xl transition-all bg-white group"
-  >
-    {/* Icon (Yahan se src hata dein, iski zaroorat nahi) */}
-    <div className="text-4xl mb-4">{s.icon}</div>
-    
-    <h3 className="text-xl font-bold mb-3">{s.title}</h3>
-    <p className="text-slate-500 text-sm leading-relaxed">{s.desc}</p>
-    
-    {/* Link use karein naya page kholne ke liye */}
-    <Link 
-      to={`/project/${s.id}`} 
-      className="mt-4 text-green-600 font-semibold flex items-center gap-2 hover:underline inline-flex"
-    >
-      Read More <span>→</span>
-    </Link>
-  </motion.div>
-))}
-             {services.map((s, i) => (
-  <motion.div 
-    key={i} 
-    whileHover={{ y: -10 }}
-    className="p-8 border border-slate-100 rounded-xl hover:shadow-2xl transition-all bg-white group"
-  >
-    {/* Icon (Yahan se src hata dein, iski zaroorat nahi) */}
-    <div className="text-4xl mb-4">{s.icon}</div>
-    
-    <h3 className="text-xl font-bold mb-3">{s.title}</h3>
-    <p className="text-slate-500 text-sm leading-relaxed">{s.desc}</p>
-    
-    {/* Link use karein naya page kholne ke liye */}
-    <Link 
-      to={`/project/${s.id}`} 
-      className="mt-4 text-green-600 font-semibold flex items-center gap-2 hover:underline inline-flex"
-    >
-      Read More <span>→</span>
-    </Link>
-  </motion.div>
-))}
-             {services.map((s, i) => (
-  <motion.div 
-    key={i} 
-    whileHover={{ y: -10 }}
-    className="p-8 border border-slate-100 rounded-xl hover:shadow-2xl transition-all bg-white group"
-  >
-    {/* Icon (Yahan se src hata dein, iski zaroorat nahi) */}
-    <div className="text-4xl mb-4">{s.icon}</div>
-    
-    <h3 className="text-xl font-bold mb-3">{s.title}</h3>
-    <p className="text-slate-500 text-sm leading-relaxed">{s.desc}</p>
-    
-    {/* Link use karein naya page kholne ke liye */}
-    <Link 
-      to={`/project/${s.id}`} 
-      className="mt-4 text-green-600 font-semibold flex items-center gap-2 hover:underline inline-flex"
-    >
-      Read More <span>→</span>
-    </Link>
-  </motion.div>
-))}
-          
+        
           </div>
         </div>
       </section>

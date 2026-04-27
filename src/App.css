@@ -39,3 +39,7 @@ body {
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
+.services{
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8;
+  mask-repeat: no-repeat;
+}
