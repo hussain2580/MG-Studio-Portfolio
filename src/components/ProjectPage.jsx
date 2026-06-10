@@ -1,25 +1,35 @@
 import { motion } from 'framer-motion';
 import { Link, useParams } from 'react-router-dom';
 import { Smartphone, Monitor, Phone, ShoppingCart, LayoutGrid, ArrowLeft } from 'lucide-react';
+import exploreScreen from '../assets/explore-screen.png';
+import signupScreen from '../assets/signup-screen.png';
+import productDetailScreen from '../assets/product-detail-screen.png';
+import homeScreen from '../assets/home-screen.png';
+import signupScreen2 from '../assets/signup-screen-2.png';
 
 const projectData = {
   "mobile-app": {
     title: "Mobile App Development",
-    projectName: "Saree Style E-commerce App",
+    projectName: "Fashion Hub E-commerce App",
     subtitle: "Android App / Fashion Brand",
-    description: "A premium Android app built for a Lahore fashion brand with seamless checkout, inventory sync, and rich mobile UX.",
+    description: "A premium Android e-commerce app built for fashion enthusiasts with seamless shopping experience, inventory sync, and rich mobile UX. Features a modern explore interface, secure payment gateway, and intuitive product discovery.",
     features: [
+      "Beautiful explore interface with product categories",
       "Responsive UI for all Android screens",
       "Firebase push notifications",
-      "Integrated payment gateway",
+      "Integrated secure payment gateway",
       "Google/phone authentication",
-      "Dark mode support"
+      "Dark mode support",
+      "Real-time inventory management",
+      "Advanced search and filter options"
     ],
     stats: [
       { label: "Downloads", value: "5k+" },
       { label: "Rating", value: "4.8/5" },
       { label: "Platform", value: "Android" }
     ],
+    appScreenImage: exploreScreen,
+    screens: [exploreScreen, productDetailScreen, homeScreen],
     icon: <Smartphone size={80} className="text-white opacity-20" />
   },
   "ui-ux": {
@@ -39,7 +49,7 @@ const projectData = {
       { label: "Launch Time", value: "4 weeks" },
       { label: "Focus", value: "UI/UX" }
     ],
-    icon: <LayoutGrid size={80} className="text-white opacity-20" />
+    icon: <LayoutGrid size={90} className="text-white opacity-20" />
   },
   "web-dev": {
     title: "Web Development",
@@ -81,40 +91,49 @@ const projectData = {
   },
   ios: {
     title: "iOS Development Services",
-    projectName: "Elegant iOS Launch App",
+    projectName: "Fashion Hub iOS App",
     subtitle: "Apple Ecosystem / Premium UX",
-    description: "A polished iOS app built with Apple platform best practices, high performance, and a premium user experience.",
+    description: "A polished iOS app built with Apple platform best practices, high performance, and a premium user experience. Features a sleek signup flow, secure authentication, and optimized performance for iPhone users.",
     features: [
-      "Native iOS interface design",
+      "Native iOS interface design with premium aesthetics",
       "App Store ready architecture",
       "Smooth gesture-based navigation",
-      "Secure data syncing",
-      "Performance and battery optimization"
+      "Secure OAuth and password authentication",
+      "Performance and battery optimization",
+      "Seamless user onboarding flow",
+      "Real-time notifications",
+      "iCloud sync support"
     ],
     stats: [
       { label: "Platform", value: "iOS" },
       { label: "Release", value: "Q1 2026" },
       { label: "Focus", value: "Apple" }
     ],
+    appScreenImage: signupScreen2,
+    screens: [signupScreen2, signupScreen],
     icon: <Phone size={80} className="text-white opacity-20" />
   },
   "software-dev": {
     title: "Software Development",
-    projectName: "Custom Workflow Platform",
-    subtitle: "Business Software / Automation",
-    description: "A tailored software solution that automates business operations, improves collaboration, and reduces manual workload.",
+    projectName: "Dar Ul Islam School Management System",
+    subtitle: "School Management / Education Platform",
+    description: "A comprehensive school management system for Dar Ul Islam School Saifpur, featuring smart fee management, teacher-led attendance tracking, principal dashboards, and student/parent portals.",
     features: [
-      "Custom dashboards and reporting",
-      "Role-based access control",
-      "API integrations and automation",
-      "Secure data management",
-      "Scalable architecture"
+      "Principal control dashboard and analytics",
+      "Teacher task assignment and management",
+      "Smart fee tracking and payment management",
+      "Attendance alerts and notifications",
+      "Student progress monitoring portals",
+      "Homework and assignment tracking",
+      "Parent-teacher communication system",
+      "Secure role-based access control"
     ],
     stats: [
-      { label: "Efficiency", value: "+35%" },
-      { label: "Modules", value: "5+" },
-      { label: "Focus", value: "Software" }
+      { label: "Users", value: "500+" },
+      { label: "Features", value: "8+" },
+      { label: "Focus", value: "Education" }
     ],
+    projectUrl: "https://dar-ul-islam-school-a2ki.vercel.app/",
     icon: <Monitor size={80} className="text-white opacity-20" />
   },
   "facebook-ads": {
@@ -183,13 +202,23 @@ const ProjectPage = () => {
             </div>
           </div>
           <div className="flex justify-center">
-            <div className="relative w-full max-w-md h-[520px] bg-slate-800 rounded-[3rem] border-[8px] border-slate-700 shadow-2xl overflow-hidden">
-              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-slate-700 rounded-b-xl z-10"></div>
-              <div className="w-full h-full bg-gradient-to-br from-green-500 to-blue-600 flex items-center justify-center">
-                {project.icon}
-                <p className="absolute bottom-10 text-white font-bold">{project.projectName}</p>
+            {project.appScreenImage ? (
+              <div className="w-full max-w-3xl">
+                <img
+                  src={project.appScreenImage}
+                  alt={project.projectName}
+                  className="w-full h-auto rounded-3xl shadow-2xl object-contain"
+                />
               </div>
-            </div>
+            ) : (
+              <div className="relative w-full max-w-md h-[520px] bg-slate-800 rounded-[3rem] border-[8px] border-slate-700 shadow-2xl overflow-hidden">
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-slate-700 rounded-b-xl z-10"></div>
+                <div className="w-full h-full bg-gradient-to-br from-green-500 to-blue-600 flex items-center justify-center">
+                  {project.icon}
+                  <p className="absolute bottom-10 text-white font-bold">{project.projectName}</p>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </section>
@@ -208,9 +237,21 @@ const ProjectPage = () => {
         <div className="bg-slate-50 p-8 rounded-3xl">
           <h3 className="text-2xl font-bold mb-4">Why this work matters</h3>
           <p className="text-slate-600 leading-relaxed mb-6">This project demonstrates our ability to match the right product experience to each business need. From Android-first apps to conversion-led web builds and premium iOS releases, MG Studio delivers the right solution for each client.</p>
-          <Link to="/" className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition">
-            Back to Portfolio
-          </Link>
+          <div className="flex gap-4">
+            {project.projectUrl && (
+              <a 
+                href={project.projectUrl} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-green-600 text-white rounded-full hover:bg-green-700 transition font-semibold"
+              >
+                Visit Project →
+              </a>
+            )}
+            <Link to="/" className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition">
+              Back to Portfolio
+            </Link>
+          </div>
         </div>
       </section>
     </div>

@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import { Logo } from './components/Logo';
 import { Link, Routes, Route } from 'react-router-dom';
 import ProjectPage from './components/ProjectPage';
+import LanguageServicesCard from './components/LanguageServicesCard';
+import heroImage from './assets/hero.png';
 // import contact from 'https://wa.me/qr/6B74S3PPOSBWP1';
 // import { mgLogo } from './components/Logo';
 import { Smartphone, Globe,  Cpu, Laptop, ShieldCheck, ShoppingCart, Mail, MessageCircle, ExternalLink } from 'lucide-react';
@@ -148,31 +150,43 @@ const Home = () => {
       {/* Services Grid Section */}
       <section id="services" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
+              <div className="text-center mb-16">
             <span className="text-green-600 font-bold uppercase tracking-widest text-sm">-What We Offer-</span>
             <h2 className="text-4xl font-extrabold text-slate-900 mt-2">Our Creative Services</h2>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            {services.map((s, i) => (
-              <motion.div 
-                key={i} 
-                whileHover={{ y: -10 }}
-                className="p-8 border border-slate-100 rounded-xl hover:shadow-2xl transition-all bg-white group"
-              >
-                <div className="text-4xl mb-4">{s.icon}</div>
-                <h3 className="text-xl font-bold mb-3">{s.title}</h3>
-                <p className="text-slate-500 text-sm leading-relaxed">{s.desc}</p>
-                <Link 
-                  to={`/project/${s.id}`} 
-                  className="mt-4 text-green-600 font-semibold flex items-center gap-2 hover:underline inline-flex"
+          <div className="grid lg:grid-cols-[1fr_1.5fr] gap-10 items-center">
+            <div className="rounded-[32px] overflow-hidden shadow-2xl bg-slate-100">
+              <img
+                src={heroImage}
+                alt="Web development showcase"
+                className="w-full h-full object-cover min-h-[320px]"
+              />
+            </div>
+            <div className="grid md:grid-cols-2 gap-8">
+              {services.map((s, i) => (
+                <motion.div 
+                  key={i} 
+                  whileHover={{ y: -10 }}
+                  className="p-8 border border-slate-100 rounded-xl hover:shadow-2xl transition-all bg-white group"
                 >
-                  Read More <span>→</span>
-                </Link>
-              </motion.div>
-            ))}
+                  <div className="text-4xl mb-4">{s.icon}</div>
+                  <h3 className="text-xl font-bold mb-3">{s.title}</h3>
+                  <p className="text-slate-500 text-sm leading-relaxed">{s.desc}</p>
+                  <Link 
+                    to={`/project/${s.id}`} 
+                    className="mt-4 text-green-600 font-semibold flex items-center gap-2 hover:underline inline-flex"
+                  >
+                    Read More <span>→</span>
+                  </Link>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
+
+      {/* Languages & Technologies Section */}
+      <LanguageServicesCard />
 
       {/* Case Studies Section */}
       <section id="work" className="py-20 bg-slate-50">
